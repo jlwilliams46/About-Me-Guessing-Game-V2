@@ -1,5 +1,6 @@
 'use strict';
 
+var correctcounters = 0
 // introducion
 var user = prompt('Welcome! What is your name?');
 console.log('User:', user);
@@ -11,6 +12,7 @@ console.log('Jamie\'s favorite season:', season);
 // validation...response if answer is correct
 if(season.toLowerCase() === 'y') {
   alert('Correct!');
+  correctcounters++;
 
 // validation...response if answer is incorrect
 }else{
@@ -24,7 +26,7 @@ console.log('Can Jamie swim:', swim);
 // validation...response if answer is correct
 if(swim.toLowerCase() === 'n') {
   alert('Correct!');
-
+  correctcounters++;
 // validation...response if answer is incorrect
 }else{
   alert('Incorrect!');
@@ -37,7 +39,7 @@ console.log('Has Jamie seen Seether live:', seether);
 // validation...response if answer is correct
 if(seether.toLowerCase() === 'y') {
   alert('Correct!');
-
+  correctcounters++;
 // validation...response if answer is incorrect
 }else{
   alert('Incorrect!');
@@ -50,7 +52,7 @@ console.log('Does Jamie own a cat:', cat);
 // validation...response if answer is correct
 if(cat.toLowerCase() === 'n') {
   alert('Correct!');
-
+  correctcounters++;
 // validation...response if answer is incorrect
 }else{
   alert('Incorrect!');
@@ -63,7 +65,7 @@ console.log('Can Jamie Sing?:', sing);
 // validation...response if answer is correct
 if(sing.toLowerCase() === 'y') {
   alert('Correct!');
-
+  correctcounters++;
 // validation...response if answer is incorrect
 }else{
   alert('Incorrect!');
@@ -73,9 +75,12 @@ if(sing.toLowerCase() === 'y') {
 var pokemon = prompt('How many Pokémon did Jamie catch yesterday?\n(Please enter a number)');
 console.log('Number of Pokémon:', pokemon);
 
-while (pokemon !== 7) {
+while (pokemon !== 7) {  //Found your issue Jamie. You have an infinite loop <3
   alert('Incorrect! Try Again');
   pokemon = prompt('How many Pokémon did Jamie catch yesterday?\n(Please enter a number)');
   console.log('Number of Pokémon:', pokemon);
 }
 alert('Correct!');
+correctcounters++;
+
+alert('you got ' +   correctcounters + ' out of 7');
